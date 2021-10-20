@@ -17,13 +17,8 @@ app.use(express.json());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
-<<<<<<< HEAD
-
-app.use("/api/v1/transactions", transactions);
-=======
 // app.get('/', (req, res) =>{ res.send('Hello from Express')})
 app.use('/api/v1/transactions', transactions)
->>>>>>> MERN
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
